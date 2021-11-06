@@ -1,3 +1,22 @@
+/**
+ * <h1>Ejercicio 6</h1>
+ * <h2> Dispositivo </h2>
+ * 
+ * <p>
+ * Programación Orientada a Objetos - Universidad del Valle de Guatemala
+ * </p>
+ * 
+ * Creado por:
+ * 
+ * @author [Evelyn Fernanda López Peiro, 21126]
+ * @author [Pedro Camposeco, 21360]
+ * @version 1.0
+ * @since 2021-Noviembre-6
+ * 
+ * 
+ **/ 
+
+
 public abstract class Dispositivo {
 
 	double price;
@@ -7,6 +26,7 @@ public abstract class Dispositivo {
 	String markerAR;
 	String deviceType;
 
+    //Constructor
 	public Dispositivo(double precio, String numero_serie, String empresa, String fecha_produccion, String codigoAR, String tipo_dispositivo){
 		this.price = precio;
 		this.serialNumber = numero_serie;
@@ -15,8 +35,8 @@ public abstract class Dispositivo {
 		this.markerAR = codigoAR;
 		this.deviceType = tipo_dispositivo;
 	}
-	
-	
+	//***************************************************************************** */
+	//Getters y setters
 	public double getPrice() {
 		return price;
 	}
@@ -66,9 +86,13 @@ public abstract class Dispositivo {
 	
 }
 
+//************************************** */
 
+
+//Clase smartphone
 class Smartphone extends Dispositivo implements I_hacer_llamadas,I_tomar_fotografias,I_navegar_por_internet,I_reporducir_multimedia,I_portabilidad{
 
+    //Construcor 
 	public Smartphone(double precio, String numero_serie, String empresa, String fecha_produccion, String codigoAR,
 			String tipo_dispositivo) {
 		super(precio, numero_serie, empresa, fecha_produccion, codigoAR, tipo_dispositivo);
@@ -102,8 +126,10 @@ class Smartphone extends Dispositivo implements I_hacer_llamadas,I_tomar_fotogra
 
 }
 
+//Clase TelefonoCelular
 class TelefonoCelular extends Dispositivo implements I_hacer_llamadas,I_portabilidad{
 
+    //Constructor
 	public TelefonoCelular(double precio, String numero_serie, String empresa, String fecha_produccion, String codigoAR,
 			String tipo_dispositivo) {
 		super(precio, numero_serie, empresa, fecha_produccion, codigoAR, tipo_dispositivo);
@@ -121,8 +147,10 @@ class TelefonoCelular extends Dispositivo implements I_hacer_llamadas,I_portabil
 	
 }
 
+//Clase TelefonoFijo
 class TelefonoFijo extends Dispositivo implements I_hacer_llamadas{
 
+    //Constructor
 	public TelefonoFijo(double precio, String numero_serie, String empresa, String fecha_produccion, String codigoAR,
 			String tipo_dispositivo) {
 		super(precio, numero_serie, empresa, fecha_produccion, codigoAR, tipo_dispositivo);
@@ -138,8 +166,10 @@ class TelefonoFijo extends Dispositivo implements I_hacer_llamadas{
 	
 }
 
+//Clase CamaraFotografica
 class CamaraFotografica extends Dispositivo implements I_tomar_fotografias, I_reporducir_multimedia, I_portabilidad{
 
+    //Constructor
 	public CamaraFotografica(double precio, String numero_serie, String empresa, String fecha_produccion, String codigoAR,
 			String tipo_dispositivo) {
 		super(precio, numero_serie, empresa, fecha_produccion, codigoAR, tipo_dispositivo);
@@ -171,8 +201,10 @@ class CamaraFotografica extends Dispositivo implements I_tomar_fotografias, I_re
 	
 }
 
+//Clase ComputadoraPersonalDesktop
 class ComputadoraPersonalDesktop extends Dispositivo implements I_navegar_por_internet, I_reporducir_multimedia, I_videojuegos{
 
+    //ComputadoraPersonalDesktop
 	public ComputadoraPersonalDesktop(double precio, String numero_serie, String empresa, String fecha_produccion,
 			String codigoAR, String tipo_dispositivo) {
 		super(precio, numero_serie, empresa, fecha_produccion, codigoAR, tipo_dispositivo);
@@ -202,8 +234,10 @@ class ComputadoraPersonalDesktop extends Dispositivo implements I_navegar_por_in
 
 }
 
+//Clase ComputaodraPersonalLaptop
 class ComputadoraPersonalLaptop extends Dispositivo implements I_navegar_por_internet, I_videojuegos, I_reporducir_multimedia, I_portabilidad{
 
+    //Constructor
 	public ComputadoraPersonalLaptop(double precio, String numero_serie, String empresa, String fecha_produccion,
 			String codigoAR, String tipo_dispositivo) {
 		super(precio, numero_serie, empresa, fecha_produccion, codigoAR, tipo_dispositivo);
@@ -241,8 +275,10 @@ class ComputadoraPersonalLaptop extends Dispositivo implements I_navegar_por_int
 	
 }
 
+//Clase SmartTV
 class SmartTV extends Dispositivo implements I_navegar_por_internet, I_reporducir_multimedia{
 
+    //Constructor
 	public SmartTV(double precio, String numero_serie, String empresa, String fecha_produccion, String codigoAR,
 			String tipo_dispositivo) {
 		super(precio, numero_serie, empresa, fecha_produccion, codigoAR, tipo_dispositivo);
@@ -265,8 +301,10 @@ class SmartTV extends Dispositivo implements I_navegar_por_internet, I_reporduci
 	
 }
 
+//Clase Tableta
 class Tableta extends Dispositivo implements I_tomar_fotografias, I_navegar_por_internet, I_reporducir_multimedia, I_portabilidad{
 
+    //Constructor
 	public Tableta(double precio, String numero_serie, String empresa, String fecha_produccion, String codigoAR,
 			String tipo_dispositivo) {
 		super(precio, numero_serie, empresa, fecha_produccion, codigoAR, tipo_dispositivo);
@@ -305,8 +343,11 @@ class Tableta extends Dispositivo implements I_tomar_fotografias, I_navegar_por_
 
 }
 
+
+//Clase SmartWatch
 class SmartWatch extends Dispositivo implements I_tomar_fotografias, I_portabilidad, I_hacer_llamadas{
 
+    //Constructor
 	public SmartWatch(double precio, String numero_serie, String empresa, String fecha_produccion, String codigoAR,
 			String tipo_dispositivo) {
 		super(precio, numero_serie, empresa, fecha_produccion, codigoAR, tipo_dispositivo);
@@ -338,26 +379,33 @@ class SmartWatch extends Dispositivo implements I_tomar_fotografias, I_portabili
 
 
 
+//************INTERFACES******************************* */
+
 interface I_hacer_llamadas{
 	// Interfaz que hacer capaz de realizar llamadas a los objetos que o implementen:
 	void realizar_llamada(String numero_telefonico);
 }
+
 interface I_tomar_fotografias{
 	// Interfaz que hacer capaz de tomar fotografias a los objetos que o implementen:
 	void tomar_fotografia();
 }
+
 interface I_navegar_por_internet{
 	// Interfaz que hacer capaz de navegar por internet a los objetos que o implementen:
 	void navegar_por_web(String pagina_web);
 }
+
 interface I_reporducir_multimedia{
 	// Interfaz que hacer capaz de reproducir multimedia a los objetos que o implementen:
 	void reproducir_multimedia();
 }
+
 interface I_portabilidad{
 	// Interfaz que hacer capaz de ser portables a los objetos que o implementen:
 	void protabilidad();
 }
+
 interface I_videojuegos{
 	// Interfaz que hacer capaz de jugar videojuegos a los objetos que o implementen:
 	void jugar_videojuego();

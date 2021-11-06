@@ -1,3 +1,24 @@
+/**
+ * <h1>Ejercicio 6</h1>
+ * <h2> Vista </h2>
+ * 
+ * <p>
+ * Programación Orientada a Objetos - Universidad del Valle de Guatemala
+ * </p>
+ * 
+ * Creado por:
+ * 
+ * @author [Evelyn Fernanda López Peiro, 21126]
+ * @author [Pedro Camposeco, 21360]
+ * @version 1.0
+ * @since 2021-Noviembre-6
+ * 
+ * 
+ **/ 
+
+ /*
+IMPORTAMOS LIBRERIAS
+*/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.LocalDate;
@@ -7,6 +28,7 @@ import java.util.Scanner;
 
 public class Vista {
 
+    //Atributos
     public boolean programa_terminado = true;
 
     private Scanner sc = new Scanner(System.in);
