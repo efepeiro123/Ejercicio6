@@ -131,6 +131,7 @@ class TelefonoFijo extends Dispositivo implements I_hacer_llamadas{
 
 	@Override
 	public void realizar_llamada(String numero_telefonico) {
+		System.out.println("Realizando una llamada desde mi telefono fijo " + this.deviceType +  " hacia: " + numero_telefonico);
 		// TODO Auto-generated method stub
 		
 	}
@@ -147,18 +148,22 @@ class CamaraFotografica extends Dispositivo implements I_tomar_fotografias, I_re
 
 	@Override
 	public void protabilidad() {
+		System.out.println("Guardando en mi bolsa la camara fotografica " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void reproducir_multimedia() {
+		System.out.println("Reproduciendo multimedia desde mi camara fotografica " + this.deviceType + "!");
+		
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void tomar_fotografia() {
+		System.out.println("Tomando una fotografia desde mi camara fotografica " + this.deviceType + "! CLICK!");
 		// TODO Auto-generated method stub
 		
 	}
@@ -176,18 +181,21 @@ class ComputadoraPersonalDesktop extends Dispositivo implements I_navegar_por_in
 
 	@Override
 	public void jugar_videojuego() {
+		System.out.println("Jugando DOOM desde mi computadora desktop " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void reproducir_multimedia() {
+		System.out.println("Reproduciendo multimedia desde mi computadora desktop " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void navegar_por_web(String pagina_web) {
+		System.out.println("Navegando desde mi computadora desktop " + this.deviceType + " a: " + pagina_web);
 		// TODO Auto-generated method stub
 		
 	}
@@ -204,24 +212,28 @@ class ComputadoraPersonalLaptop extends Dispositivo implements I_navegar_por_int
 
 	@Override
 	public void protabilidad() {
+		System.out.println("Guardando en mi bolsa la computadora laptop " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void reproducir_multimedia() {
+		System.out.println("Reproduciendo multimedia desde mi computadora laptop " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void jugar_videojuego() {
+		System.out.println("Jugando Mario 64 desde mi computadora laptop " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void navegar_por_web(String pagina_web) {
+		System.out.println("Navegando desde mi computadora laptop " + this.deviceType + " a: " + pagina_web);
 		// TODO Auto-generated method stub
 		
 	}
@@ -239,12 +251,14 @@ class SmartTV extends Dispositivo implements I_navegar_por_internet, I_reporduci
 
 	@Override
 	public void reproducir_multimedia() {
+		System.out.println("Reproduciendo multimedia desde mi smart tv " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void navegar_por_web(String pagina_web) {
+		System.out.println("Navegando desde mi smart tv " + this.deviceType + " a: " + pagina_web);
 		// TODO Auto-generated method stub
 		
 	}
@@ -261,24 +275,28 @@ class Tableta extends Dispositivo implements I_tomar_fotografias, I_navegar_por_
 
 	@Override
 	public void protabilidad() {
+		System.out.println("Guardando en mi bolsa la tableta " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void reproducir_multimedia() {
+		System.out.println("Reproduciendo multimedia desde mi tableta " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void navegar_por_web(String pagina_web) {
+		System.out.println("Navegando desde mi tableta " + this.deviceType + " a: " + pagina_web);
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void tomar_fotografia() {
+		System.out.println("Tomando una fotografia desde mi tableta" + this.deviceType + "! CLICK!");
 		// TODO Auto-generated method stub
 		
 	}
@@ -297,18 +315,21 @@ class SmartWatch extends Dispositivo implements I_tomar_fotografias, I_portabili
 
 	@Override
 	public void realizar_llamada(String numero_telefonico) {
+		System.out.println("Realizando una llamada desde mi smartwatch " + this.deviceType +  " hacia: " + numero_telefonico);
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void protabilidad() {
+		System.out.println("Poniendo en mi muñeca mi smartwatch " + this.deviceType + "!");
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void tomar_fotografia() {
+		System.out.println("Tomando una fotografia desde mi smartwatch " + this.deviceType + "! CLICK!");
 		// TODO Auto-generated method stub
 		
 	}
@@ -341,3 +362,4 @@ interface I_videojuegos{
 	// Interfaz que hacer capaz de jugar videojuegos a los objetos que o implementen:
 	void jugar_videojuego();
 }
+
